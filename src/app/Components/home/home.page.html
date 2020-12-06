@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-badge *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+       <ion-col size="4" *ngFor="let product of items"> 
+        <ion-card>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc">
+          <h4>{{product.name}}</h4>
+          <p>{{product.price | currency: 'R'}}</p>
+          <ion-button expand="block" color="primary" size="small" (click)="add(product)">ADD</ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

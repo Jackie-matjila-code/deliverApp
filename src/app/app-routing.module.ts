@@ -1,15 +1,34 @@
+import { TabsPage } from './Menu/tabs/tabs.page';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'tabs',
+    component: TabsPage, children: [
+      {
+        path: '',
+        redirectTo: '/tabs/home',
+        pathMatch: 'full'
+      },
+      
+      {
+        path: 'home',
+        loadChildren: () => import('./Components/home/home.module').then( m => m.HomePageModule)
+      },
+      {
+        path: 'cart',
+        loadChildren: () => import('./Components/cart/cart.module').then( m => m.CartPageModule)
+      },
+      {
+        path: 'signup',
+        loadChildren: () => import('./Components/signup/signup.module').then( m => m.SignupPageModule)
+      },
+    ]
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'login',
+    loadChildren: () => import('./Components/login/login.module').then( m => m.LoginPageModule)
   },
 ];
 
