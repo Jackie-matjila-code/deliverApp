@@ -1,5 +1,7 @@
+import { Router } from '@angular/router';
 import { CartService } from './../../Services/cart.service';
 import { Component, OnInit } from '@angular/core';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +14,7 @@ export class CartPage implements OnInit {
  
   total = 0;
  
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router) { }
  
   ngOnInit() {
     let items = this.cartService.getCart();
@@ -26,5 +28,9 @@ export class CartPage implements OnInit {
     }
     this.selectedItems = Object.keys(selected).map(key => selected[key])
     this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.price), 0);
+  }
+
+  checkOut() {
+     this.router.navigateByUrl('payments');
   }
 }

@@ -6,11 +6,6 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsPage, children: [
-      {
-        path: '',
-        redirectTo: '/tabs/home',
-        pathMatch: 'full'
-      },
       
       {
         path: 'home',
@@ -20,16 +15,43 @@ const routes: Routes = [
         path: 'cart',
         loadChildren: () => import('./Components/cart/cart.module').then( m => m.CartPageModule)
       },
-      {
-        path: 'signup',
-        loadChildren: () => import('./Components/signup/signup.module').then( m => m.SignupPageModule)
-      },
+
     ]
   },
   {
     path: 'login',
     loadChildren: () => import('./Components/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'payments',
+    loadChildren: () => import('./Components/payments/payments.module').then( m => m.PaymentsPageModule)
+  },
+  {
+    path: 'cash',
+    loadChildren: () => import('./Components/cash/cash.module').then( m => m.CashPageModule)
+  },
+  {
+    path: 'credit',
+    loadChildren: () => import('./Components/credit/credit.module').then( m => m.CreditPageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'signup',
+    pathMatch: 'full'
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./Components/signup/signup.module').then( m => m.SignupPageModule)
+  },  {
+    path: 'address',
+    loadChildren: () => import('./Components/address/address.module').then( m => m.AddressPageModule)
+  },
+  {
+    path: 'thank-you',
+    loadChildren: () => import('./Components/thank-you/thank-you.module').then( m => m.ThankYouPageModule)
+  },
+
+
 ];
 
 @NgModule({

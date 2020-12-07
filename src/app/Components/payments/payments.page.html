@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    <ion-title>Payment Methods</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label (click)="credit()">Credit Card</ion-label>
+      <ion-avatar slot="start">
+         <img src="data:image/png;base64,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">
+      </ion-avatar>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="cash()">Cash</ion-label>
+      <ion-avatar slot="start">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQODXTwkjmng1p0taelAnZRwjNKuZ5GTLrXwA&usqp=CAU">
+      </ion-avatar>
+    </ion-item>
+    </ion-list>
+</ion-content>

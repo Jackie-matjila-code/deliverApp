@@ -13,9 +13,9 @@ export class CartService {
     {id:2, name:'Acer', price:5500},
     {id:3, name:'Hp', price:6500},
     {id:4, name:'Lenovo', price:3500},
-    {id:5, name:'Product 5', price:7500},
-    {id:6, name:'Product 6',price: 8500},
-    {id:7, name:'Product 7', price:9500},
+    {id:5, name:'Huawei', price:7500},
+    {id:6, name:'Aspiron',price: 8500},
+    
   ]
 
   constructor() { }
