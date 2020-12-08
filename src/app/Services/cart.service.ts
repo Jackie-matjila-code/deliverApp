@@ -15,6 +15,9 @@ export class CartService {
     {id:4, name:'Lenovo', price:3500},
     {id:5, name:'Huawei', price:7500},
     {id:6, name:'Aspiron',price: 8500},
+    {id:4, name:'Lenovo', price:13500},
+    {id:5, name:'Huawei', price:11000},
+    {id:6, name:'Aspiron',price: 18500}
     
   ]
 
