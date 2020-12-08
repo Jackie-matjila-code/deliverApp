@@ -13,10 +13,7 @@
     <ion-item>
       Total: <span slot="end">{{ total | currency:'R':'symbol' }}</span>
     </ion-item>
-    <div *ngFor="let item of selectedItems">
-      <div *ngIf="item.count > 0">
-        <ion-button expand="block" color="primary" size="small" (click)="checkOut()"><ion-icon slot="icon-only" name="cart"></ion-icon>CheckOut</ion-button>
-      </div>
-    </div>
+        <ion-button expand="block" color="primary" size="small" (click)="checkOut()" [disabled]="!total"><ion-icon slot="icon-only" name="cart"></ion-icon>CheckOut</ion-button>
+   
   </ion-list>
 </ion-content>

@@ -12,7 +12,7 @@ export class CartPage implements OnInit {
 
   selectedItems = [];
  
-  total = 0;
+  total:number = 0;
  
   constructor(private cartService: CartService, private router: Router) { }
  
@@ -31,6 +31,9 @@ export class CartPage implements OnInit {
   }
 
   checkOut() {
-     this.router.navigateByUrl('payments');
+    // if(this.total > 0){
+     
+    // }
+    this.router.navigateByUrl('payments');
   }
 }
