@@ -38,8 +38,10 @@ export class SignupPage implements OnInit {
   }
 
    login() {
-      this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+     if(this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())){
       this.router.navigate(['tabs/home']);
+     }
+       
   }
    logout() {
     this.auth.signOut();

@@ -1,15 +1,18 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="medium">
     <ion-title>Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
+    <ion-card >
     <ion-item *ngFor="let item of selectedItems" lines="inset">
-      {{ item.count }}x {{ item.name }} - {{ item.price | currency:'R':'symbol' }}
-      <ion-label slot="end" text-right>{{ (item.price * item.count) | currency:'R':'symbol' }}</ion-label>
+      <img [src]="item.url">
+      <ion-label slot="end" text-right>{{ item.count }}x {{ item.name }} - {{ item.price | currency:'R':'symbol' }}</ion-label>
+      <ion-label >{{ (item.price * item.count) | currency:'R':'symbol' }}</ion-label>
     </ion-item>
+  </ion-card>
     <ion-item>
       Total: <span slot="end">{{ total | currency:'R':'symbol' }}</span>
     </ion-item>

@@ -9,15 +9,15 @@ export class CartService {
   cartList = [];
 
   products = [
-    {id:1, name:'Dell', price:4500} ,
-    {id:2, name:'Acer', price:5500},
-    {id:3, name:'Hp', price:6500},
-    {id:4, name:'Lenovo', price:3500},
-    {id:5, name:'Huawei', price:7500},
-    {id:6, name:'Aspiron',price: 8500},
-    {id:4, name:'Lenovo', price:13500},
-    {id:5, name:'Huawei', price:11000},
-    {id:6, name:'Aspiron',price: 18500}
+    {id:1, name:'Dell', price:4500, url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'} ,
+    {id:2, name:'Acer', price:5500, url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'},
+    {id:3, name:'Hp', price:6500, url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'},
+    {id:4, name:'Lenovo', price:3500,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'},
+    {id:5, name:'Huawei', price:7500,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'},
+    {id:6, name:'Aspiron',price: 8500,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'},
+    {id:4, name:'Lenovo', price:13500,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'},
+    {id:5, name:'Huawei', price:11000,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'},
+    {id:6, name:'Aspiron',price: 18500,url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa6ZxxxOq4rcneDcf5kII2UFCAwTu43l82AhkZpfMvvCernKOh32srGMcb8Mk&usqp=CAc'}
     
   ]
 
