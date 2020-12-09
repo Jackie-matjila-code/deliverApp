@@ -6,17 +6,19 @@
 
 <ion-content>
   <ion-list>
-    <ion-card >
+    <ion-card>
     <ion-item *ngFor="let item of selectedItems" lines="inset">
-      <img [src]="item.url">
+      <img [src]="item.url"> 
       <ion-label slot="end" text-right>{{ item.count }}x {{ item.name }} - {{ item.price | currency:'R':'symbol' }}</ion-label>
       <ion-label >{{ (item.price * item.count) | currency:'R':'symbol' }}</ion-label>
+      <ion-card-subtitle  slot="end" text-left (click)="delete(item)"><ion-icon name="trash-outline" style="zoom:2.0;" ></ion-icon></ion-card-subtitle>
+      <ion-button  fill="fill" slot="end"  (click)="delete(item)"> <ion-icon name="trash" ></ion-icon></ion-button>
     </ion-item>
   </ion-card>
     <ion-item>
       Total: <span slot="end">{{ total | currency:'R':'symbol' }}</span>
     </ion-item>
         <ion-button expand="block" color="primary" size="small" (click)="checkOut()" [disabled]="!total"><ion-icon slot="icon-only" name="cart"></ion-icon>CheckOut</ion-button>
-   
+        
   </ion-list>
 </ion-content>

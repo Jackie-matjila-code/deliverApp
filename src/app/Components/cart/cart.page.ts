@@ -12,7 +12,8 @@ export class CartPage implements OnInit {
 
   selectedItems = [];
  
-  total:number = 0;
+  total;
+  isEmptyCart: boolean = true;
  
   constructor(private cartService: CartService, private router: Router) { }
  
@@ -28,12 +29,18 @@ export class CartPage implements OnInit {
     }
     this.selectedItems = Object.keys(selected).map(key => selected[key])
     this.total = this.selectedItems.reduce((a, b) => a + (b.count * b.price), 0);
+    
   }
 
   checkOut() {
-    // if(this.total > 0){
-     
-    // }
     this.router.navigateByUrl('payments');
   }
+
+  delete(product){
+
+    this.selectedItems = this.cartService.getCart();
+    this.cartService.removeItemAll(product);
+    this.total = this.selectedItems.length
+    
+    }
 }

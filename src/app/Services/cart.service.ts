@@ -27,21 +27,27 @@ export class CartService {
    this.cartList.push(product);
   }
 
-  removeItem(product){
+
+  removeItemAll(product) {
+    // var idx = this.cartList.indexOf(product);
+    //   if (idx !== -1) {
+    //     this.cartList.splice(idx, 1);
+    //   }
     var i = 0;
-   while(i < this.cartList.length){
-    if(this.cartList[i] === product){
-      this.cartList.splice(i, 1);
-    }else{
-      ++i;
+    while(i < this.cartList.length){
+      if(this.cartList[i] === product){
+        this.cartList.splice(i, 1);
+      }else{
+        ++i;
+      }
     }
+    return this.cartList;
   }
-  return this.cartList;
- }
  getCart() {
   return this.cartList;
 }
 getProducts() {
   return this.products;
 }
+ 
 }
