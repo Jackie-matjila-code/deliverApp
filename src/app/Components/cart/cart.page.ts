@@ -40,7 +40,7 @@ export class CartPage implements OnInit {
 
     this.selectedItems = this.cartService.getCart();
     this.cartService.removeItemAll(product);
-    this.total = this.selectedItems.length
+    
     
     }
 }

@@ -17,6 +17,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent, TabsPage],
   entryComponents: [],
@@ -24,7 +26,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // firestore
     AngularFirestoreModule, // auth
-    AngularFireStorageModule // storage
+    AngularFireStorageModule, // storage
+    HttpClientModule
   ],
   providers: [
     StatusBar,
